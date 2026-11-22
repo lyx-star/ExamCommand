@@ -1,0 +1,22 @@
+<Application x:Class="ExamCommand.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="SettingsWindow.xaml">
+    <Application.Resources>
+        <!-- 仅提供字体/画笔资源，不再全局改写 TextBlock 颜色 -->
+        <FontFamily x:Key="MiSans">/ExamCommand;component/Resources/#MiSans Normal</FontFamily>
+        <FontFamily x:Key="MiSansDemibold">/ExamCommand;component/Resources/#MiSans Demibold</FontFamily>
+
+        <SolidColorBrush x:Key="ScreenBg" Color="#0084D0" />
+        <SolidColorBrush x:Key="ScreenInk" Color="#C0FFFF" />
+        <SolidColorBrush x:Key="ScreenLine" Color="#0069A8" />
+
+        <Style x:Key="ScreenText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource ScreenInk}" />
+            <Setter Property="FontFamily" Value="{StaticResource MiSans}" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+    </Application.Resources>
+</Application>
